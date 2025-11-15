@@ -33,20 +33,21 @@ DEST="/home/user/backup_$(date +%Y%m%d_%H%M%S)"
 
 cp -r "$SRC" "$DEST"
 
-echo "Backup completed at $DEST"
-#### ***CPU & Memory Monitor — monitor.sh***
+echo "Backup completed at $DEST" ```
 
-#!/bin/bash
+```md
+## 📥 2. Download Script (download.sh)
 
-# Logs CPU and memory usage every 10 seconds
+### 📌 Purpose
+Downloads a file from the internet and saves it to a predefined directory.
 
-while true; do 
-  echo "$(date): CPU: $(top -bn1 | grep 'Cpu(s)')  MEM: $(free -m | grep Mem)" >> usage.log
-  sleep 10
-done
+### ✨ Features
+- Downloads any file using wget  
+- Automatically creates download folder  
+- Requires only a URL as input  
 
-## ***File Downloader - (download.sh)***
-
+### 🧾 **Code**
+```bash
 #!/bin/bash
 
 # Author: Mohd Hammaz
@@ -60,5 +61,33 @@ mkdir -p "$DEST"
 wget "$URL" -P "$DEST"
 
 echo "Download completed and saved to $DEST"
+```
+
+### 🧾 **Code**
+```bash
+#!/bin/bash
+
+# Author: Mohd Hammaz
+# Purpose: Download a file using wget
+
+URL=$1
+DEST="/home/user/downloads"
+
+mkdir -p "$DEST"
+
+wget "$URL" -P "$DEST"
+
+echo "Download completed and saved to $DEST"
+```
+
+
+
+
+
+
+
+
+
+
 
 
