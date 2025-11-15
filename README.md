@@ -1,15 +1,15 @@
-# 🐧 Linux Automation Project
+#  Linux Automation Project
 A collection of useful Linux automation scripts for backup, system monitoring, and automated file downloading — created by **Mohd Hammaz**.
 
 ---
 
-## 📘 **Introduction**
+##  **Introduction**
 
 This project contains three shell scripts:
 
-- 📁 **Directory Backup Script**
-- 🖥️ **CPU & Memory Monitoring Script**
-- ⬇️ **Automated File Download Script**
+-  **Directory Backup Script**
+-  **CPU & Memory Monitoring Script**
+-  **Automated File Download Script**
 
 These scripts help with real system maintenance, logging, automation practice, and learning Linux shell scripting.
 
@@ -17,10 +17,10 @@ These scripts help with real system maintenance, logging, automation practice, a
 
 # 📂 **1. Backup Script (`backup.sh`)**
 
-### 📌 **Purpose**
+### � **Purpose**
 Creates a complete backup of a directory with a timestamp.
 
-### ✨ **Features**
+###  **Features**
 - Automatically generates timestamped backup folders  
 - Safely copies all files & subdirectories  
 - Easy to modify for any directory  
@@ -45,19 +45,19 @@ echo "Backup completed at $DEST"
 
 ---
 
-# 🖥️ **2. CPU & Memory Monitor (`monitor.sh`)**
+#  **2. CPU & Memory Monitor (`monitor.sh`)**
 
-### 📌 **Purpose**
+###  **Purpose**
 Logs system CPU & memory usage every 10 seconds.
 
-### ✨ **Features**
+###  **Features**
 - Tracks CPU load in real-time  
 - Logs memory usage  
 - Saves data to `usage.log`
 
 ---
 
-### 🧾 **Code**
+###  **Code**
 ```bash
 #!/bin/bash
 
@@ -72,19 +72,19 @@ done
 
 ---
 
-# ⬇️ **3. File Download Script (`download.sh`)**
+#  **3. File Download Script (`download.sh`)**
 
-### 📌 **Purpose**
+###  **Purpose**
 Downloads a file from the internet and saves it to a predefined folder.
 
-### ✨ **Features**
+###  **Features**
 - Downloads any file using wget  
 - Automatically creates download folder  
 - Requires only a URL as input  
 
 ---
 
-### 🧾 **Code**
+###  **Code**
 ```bash
 #!/bin/bash
 
