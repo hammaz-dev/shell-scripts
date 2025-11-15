@@ -1,26 +1,33 @@
-#  Linux Automation Project  
-
-##  Introduction  
-This repository contains three essential Linux automation shell scripts for system management and learning:  
--  Directory Backup Script  
--  CPU & Memory Monitoring Script  
--  Automated File Download Script  
-
-These scripts help with real system maintenance, logging, and hands-on shell scripting practice.
+# 🐧 Linux Automation Project
+A collection of useful Linux automation scripts for backup, system monitoring, and automated file downloading — created by **Mohd Hammaz**.
 
 ---
 
-# 📁 1. Backup Script (`backup.sh`)
+## 📘 **Introduction**
 
-###  **Purpose:**  
-Creates a complete backup of a folder with a timestamp.
+This project contains three shell scripts:
 
-### � **Features:**  
+- 📁 **Directory Backup Script**
+- 🖥️ **CPU & Memory Monitoring Script**
+- ⬇️ **Automated File Download Script**
+
+These scripts help with real system maintenance, logging, automation practice, and learning Linux shell scripting.
+
+---
+
+# 📂 **1. Backup Script (`backup.sh`)**
+
+### 📌 **Purpose**
+Creates a complete backup of a directory with a timestamp.
+
+### ✨ **Features**
 - Automatically generates timestamped backup folders  
-- Copies all files safely  
+- Safely copies all files & subdirectories  
 - Easy to modify for any directory  
 
-### 🧾 **Code:**
+---
+
+### 🧾 **Code**
 ```bash
 #!/bin/bash
 
@@ -33,18 +40,49 @@ DEST="/home/user/backup_$(date +%Y%m%d_%H%M%S)"
 
 cp -r "$SRC" "$DEST"
 
-echo "Backup completed at $DEST" **```**
+echo "Backup completed at $DEST"
+```
 
-```md
-## 📥 2. Download Script (download.sh)
+---
 
-### 📌 Purpose
-Downloads a file from the internet and saves it to a predefined directory.
+# 🖥️ **2. CPU & Memory Monitor (`monitor.sh`)**
 
-### ✨ Features
+### 📌 **Purpose**
+Logs system CPU & memory usage every 10 seconds.
+
+### ✨ **Features**
+- Tracks CPU load in real-time  
+- Logs memory usage  
+- Saves data to `usage.log`
+
+---
+
+### 🧾 **Code**
+```bash
+#!/bin/bash
+
+# Author: Mohd Hammaz
+# Purpose: Logs CPU & memory usage every 10 seconds
+
+while true; do
+  echo "$(date): CPU: $(top -bn1 | grep 'Cpu(s)')  MEM: $(free -m | grep Mem)" >> usage.log
+  sleep 10
+done
+```
+
+---
+
+# ⬇️ **3. File Download Script (`download.sh`)**
+
+### 📌 **Purpose**
+Downloads a file from the internet and saves it to a predefined folder.
+
+### ✨ **Features**
 - Downloads any file using wget  
 - Automatically creates download folder  
 - Requires only a URL as input  
+
+---
 
 ### 🧾 **Code**
 ```bash
@@ -61,18 +99,4 @@ mkdir -p "$DEST"
 wget "$URL" -P "$DEST"
 
 echo "Download completed and saved to $DEST"
-**```**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
