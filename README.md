@@ -33,7 +33,7 @@ DEST="/home/user/backup_$(date +%Y%m%d_%H%M%S)"
 
 cp -r "$SRC" "$DEST"
 
-echo "Backup completed at $DEST" ```
+echo "Backup completed at $DEST" **```**
 
 ```md
 ## 📥 2. Download Script (download.sh)
@@ -61,24 +61,9 @@ mkdir -p "$DEST"
 wget "$URL" -P "$DEST"
 
 echo "Download completed and saved to $DEST"
-```
+**```**
 
-### 🧾 **Code**
-```bash
-#!/bin/bash
 
-# Author: Mohd Hammaz
-# Purpose: Download a file using wget
-
-URL=$1
-DEST="/home/user/downloads"
-
-mkdir -p "$DEST"
-
-wget "$URL" -P "$DEST"
-
-echo "Download completed and saved to $DEST"
-```
 
 
 
